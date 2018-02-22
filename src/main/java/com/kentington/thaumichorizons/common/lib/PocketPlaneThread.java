@@ -24,7 +24,7 @@ public class PocketPlaneThread implements Runnable {
    }
 
    public void run() {
-      System.out.println("Starting pocket plane generation thread...");
+      cpw.mods.fml.common.FMLLog.info("Starting pocket plane generation thread...");
       PocketPlaneData.generatePocketPlane(this.aspects, this.data, this.world, this.x, this.y, this.z);
    }
 }

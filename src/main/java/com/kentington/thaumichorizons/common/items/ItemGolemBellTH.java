@@ -31,7 +31,7 @@ public class ItemGolemBellTH extends ItemGolemBell {
 
    public ItemGolemBellTH() {
       this.setHasSubtypes(false);
-      this.setCreativeTab(Thaumcraft.tabTC);
+      this.setCreativeTab(ThaumicHorizons.tabTH);
       this.setMaxStackSize(1);
    }
 
@@ -41,7 +41,7 @@ public class ItemGolemBellTH extends ItemGolemBell {
    }
 
    public String getUnlocalizedName(ItemStack par1ItemStack) {
-      return "item.GolemBell";
+      return "item.GolemBellTH";
    }
 
    public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer player, EntityLivingBase target) {

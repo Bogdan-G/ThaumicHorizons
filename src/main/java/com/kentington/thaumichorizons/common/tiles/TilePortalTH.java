@@ -62,11 +62,11 @@ public class TilePortalTH extends TileThaumcraft {
                      int oldDim = player.dimension;
                      player.mcServer.getConfigurationManager().transferPlayerToDimension(player, this.dimension, new NightmareTeleporter(mServer.worldServerForDimension(this.dimension)));
                      if(oldDim == ThaumicHorizons.dimensionPocketId && PocketPlaneData.positionsMap.containsKey(player.getCommandSenderName())) {
-                        System.out.println("Loading position " + PocketPlaneData.positionsMap.get(player.getCommandSenderName()));
+                        cpw.mods.fml.common.FMLLog.info("Loading position " + PocketPlaneData.positionsMap.get(player.getCommandSenderName()));
                         player.setPositionAndUpdate(((Vec3)PocketPlaneData.positionsMap.get(player.getCommandSenderName())).xCoord, ((Vec3)PocketPlaneData.positionsMap.get(player.getCommandSenderName())).yCoord, ((Vec3)PocketPlaneData.positionsMap.get(player.getCommandSenderName())).zCoord);
                      } else if(this.pocket >= 0) {
                         PocketPlaneData.positionsMap.put(player.getCommandSenderName(), Vec3.createVectorHelper((double)super.xCoord + 0.5D, (double)super.yCoord + 0.5D, (double)super.zCoord + 0.5D));
-                        System.out.println("Saving position " + PocketPlaneData.positionsMap.get(player.getCommandSenderName()));
+                        cpw.mods.fml.common.FMLLog.info("Saving position " + PocketPlaneData.positionsMap.get(player.getCommandSenderName()));
                         player.setPositionAndUpdate(0.5D, 129.0D, (double)((float)(128 * (this.pocket - 3)) + 0.5F));
                         super.worldObj.setBlockToAir(super.xCoord, super.yCoord, super.zCoord);
                      }

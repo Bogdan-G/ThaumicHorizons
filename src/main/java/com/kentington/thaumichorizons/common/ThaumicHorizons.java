@@ -636,14 +636,15 @@ public class ThaumicHorizons {
       GameRegistry.registerItem(itemSuicidePill, "suicidePill");
       GameRegistry.registerItem(itemGolemPowder, "golemPowder");
       GameRegistry.registerItem(itemGolemPlacer, "golemPlacer");
+      GameRegistry.registerItem(itemGolemBellTH, "GolemBellTH");
 
-      try {
+      /*try {
          GameRegistry.addSubstitutionAlias("Thaumcraft:GolemBell", Type.ITEM, itemGolemBellTH);
          ConfigItems.itemGolemBell = itemGolemBellTH;
       } catch (ExistingSubstitutionException var7) {
          var7.printStackTrace();
-         System.out.println("WARNING: Unable to override golemancer\'s bell! Animated golems will behave unpredictably!");
-      }
+         cpw.mods.fml.common.FMLLog.info("WARNING: Unable to override golemancer\'s bell! Animated golems will behave unpredictably!");
+      }*/
 
       GameRegistry.registerItem(itemBoatGreatwood, "boatGreatwood");
       GameRegistry.registerItem(itemBoatThaumium, "boatThaumium");
@@ -765,7 +766,7 @@ public class ThaumicHorizons {
       if(useAlternateBell) {
          alcheponics = new ResearchItem("alternateGolemBell", "ThaumicHorizons", (new AspectList()).add(Aspect.ORDER, 2).add(Aspect.ENERGY, 2).add(Aspect.CRYSTAL, 3), -2, 0, 1, new ItemStack(itemGolemBellTH));
          alcheponics1 = new ResearchPage("alternateGolemBell1");
-         alcheponics2 = new ResearchPage(ThaumcraftApi.addArcaneCraftingRecipe("GOLEMBELL", new ItemStack(itemGolemBellTH), (new AspectList()).add(Aspect.ORDER, 5), new Object[]{"QQ ", "QQ ", "  S", Character.valueOf('S'), "stickWood", Character.valueOf('Q'), Items.quartz}));
+         alcheponics2 = new ResearchPage(ThaumcraftApi.addArcaneCraftingRecipe("GOLEMBELL", new ItemStack(itemGolemBellTH), (new AspectList()).add(Aspect.ORDER, 6), new Object[]{"QQ ", "QQ ", "  S", Character.valueOf('S'), "stickWood", Character.valueOf('Q'), Items.quartz}));
          alcheponics.setPages(new ResearchPage[]{alcheponics1, alcheponics2});
          alcheponics.setSiblings(new String[]{"GOLEMBELL"});
          alcheponics.setConcealed();

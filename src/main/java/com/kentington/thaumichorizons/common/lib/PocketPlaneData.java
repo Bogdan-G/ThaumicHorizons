@@ -62,7 +62,7 @@ public class PocketPlaneData {
 
 
    public static void generatePocketPlane(AspectList aspects, PocketPlaneData data, World world, int vortexX, int vortexY, int vortexZ) {
-      System.out.println("Starting pocket plane generation");
+      cpw.mods.fml.common.FMLLog.info("Starting pocket plane generation");
       byte xCenter = 0;
       short yCenter = 128;
       int zCenter = 256 * planes.size();
@@ -107,7 +107,7 @@ public class PocketPlaneData {
       data.portalD = new int[3];
       planes.add(data);
       positions.add(Vec3.createVectorHelper((double)vortexX, (double)vortexY, (double)vortexZ));
-      System.out.println("Finished with pocket plane generation!");
+      cpw.mods.fml.common.FMLLog.info("Finished with pocket plane generation!");
    }
 
    static int getColor(AspectList aspects) {
@@ -126,7 +126,7 @@ public class PocketPlaneData {
       }
 
       int var9 = r * 256 * 256 + g * 256 + b;
-      System.out.println("Plane color is " + var9);
+      cpw.mods.fml.common.FMLLog.info("Plane color is " + var9);
       return var9;
    }
 
@@ -988,7 +988,7 @@ public class PocketPlaneData {
    }
 
    public static void drawAPocket(int xCenter, int yCenter, int zCenter, PocketPlaneData data, World world, AspectList aspects, int noise, Block block, int md, int xSize, int zSize, int xOffset, int yOffset, int zOffset) {
-      System.out.println("Drawing a pocket of " + block + " with width " + xSize + " and length " + zSize);
+      cpw.mods.fml.common.FMLLog.info("Drawing a pocket of " + block + " with width " + xSize + " and length " + zSize);
       NoiseGeneratorOctaves noiseGen = new NoiseGeneratorOctaves(world.rand, 10);
       Object noiseDataTop = null;
       double[] var22 = noiseGen.generateNoiseOctaves((double[])noiseDataTop, xCenter - xSize + xOffset, yCenter + yOffset, zCenter - zSize + zOffset, xSize, 1, zSize, (double)((float)noise / 50.0F), (double)((float)noise / 25.0F), (double)((float)noise / 50.0F));
@@ -1237,7 +1237,7 @@ public class PocketPlaneData {
    }
 
    public static void destroyPortal(int id, int which) {
-      System.out.println("Destroying portal " + which + " in plane " + id);
+      cpw.mods.fml.common.FMLLog.info("Destroying portal " + which + " in plane " + id);
       PocketPlaneData data = (PocketPlaneData)planes.get(id);
       WorldServer world = MinecraftServer.getServer().worldServerForDimension(ThaumicHorizons.dimensionPocketId);
       int z;
@@ -1287,7 +1287,7 @@ public class PocketPlaneData {
    }
 
    public static void makePortal(int id, int which, int xCoord, int yCoord, int zCoord) {
-      System.out.println("Creating portal " + which + " in plane " + id);
+      cpw.mods.fml.common.FMLLog.info("Creating portal " + which + " in plane " + id);
       PocketPlaneData data = (PocketPlaneData)planes.get(id);
       WorldServer world = MinecraftServer.getServer().worldServerForDimension(ThaumicHorizons.dimensionPocketId);
       int z;
