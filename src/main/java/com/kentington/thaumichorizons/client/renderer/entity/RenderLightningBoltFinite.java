@@ -21,7 +21,7 @@ public class RenderLightningBoltFinite extends RenderLightningBolt {
       double[] adouble1 = new double[8];
       double d3 = 0.0D;
       double d4 = 0.0D;
-      Random random = new Random(p_76986_1_.boltVertex);
+      Random random = new org.bogdang.modifications.random.XSTR(p_76986_1_.boltVertex);
       double mult = (double)p_76986_1_.boltLength / 128.0D;
 
       int k1;
@@ -33,7 +33,7 @@ public class RenderLightningBoltFinite extends RenderLightningBolt {
       }
 
       for(k1 = 0; k1 < 4; ++k1) {
-         Random random1 = new Random(p_76986_1_.boltVertex);
+         Random random1 = new org.bogdang.modifications.random.XSTR(p_76986_1_.boltVertex);
 
          for(int j = 0; j < 3; ++j) {
             int k = 7;

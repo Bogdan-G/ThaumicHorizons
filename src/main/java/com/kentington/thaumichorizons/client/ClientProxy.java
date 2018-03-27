@@ -307,9 +307,9 @@ public class ClientProxy extends CommonProxy {
                for(int z = -1; z < 2; ++z) {
                   for(int i1 = 0; i1 < howMany; ++i1) {
                      fx = new FXSparkle(p.worldObj, blockX + 0.5D, blockY + 0.5D, blockZ + 0.5D, 1.0F, 0, 6);
-                     fx.motionX = (p.worldObj.rand.nextDouble() - 0.5D) / 4.0D;
-                     fx.motionY = (p.worldObj.rand.nextDouble() - 0.5D) / 4.0D;
-                     fx.motionZ = (p.worldObj.rand.nextDouble() - 0.5D) / 4.0D;
+                     fx.motionX = (p.worldObj.rand.nextFloat() - 0.5F) / 4.0D;
+                     fx.motionY = (p.worldObj.rand.nextFloat() - 0.5F) / 4.0D;
+                     fx.motionZ = (p.worldObj.rand.nextFloat() - 0.5F) / 4.0D;
                      fx.noClip = true;
                      FMLClientHandler.instance().getClient().effectRenderer.addEffect(fx);
                   }
@@ -319,9 +319,9 @@ public class ClientProxy extends CommonProxy {
       } else {
          for(i = 0; i < howMany; ++i) {
             fx = new FXSparkle(p.worldObj, blockX + 0.5D, blockY + 0.5D, blockZ + 0.5D, 1.0F, 0, 6);
-            fx.motionX = (p.worldObj.rand.nextDouble() - 0.5D) / 4.0D;
-            fx.motionY = (p.worldObj.rand.nextDouble() - 0.5D) / 4.0D;
-            fx.motionZ = (p.worldObj.rand.nextDouble() - 0.5D) / 4.0D;
+            fx.motionX = (p.worldObj.rand.nextFloat() - 0.5F) / 4.0D;
+            fx.motionY = (p.worldObj.rand.nextFloat() - 0.5F) / 4.0D;
+            fx.motionZ = (p.worldObj.rand.nextFloat() - 0.5F) / 4.0D;
             fx.noClip = true;
             FMLClientHandler.instance().getClient().effectRenderer.addEffect(fx);
          }
@@ -337,7 +337,7 @@ public class ClientProxy extends CommonProxy {
             for(int y = -1; y < 2; ++y) {
                for(int z = -1; z < 2; ++z) {
                   for(int i1 = 0; i1 < howMany; ++i1) {
-                     fx = new EntityFlameFX(w, blockX + 0.5D + (double)i, blockY + 0.5D + (double)y, blockZ + 0.5D + (double)z, (w.rand.nextDouble() - 0.5D) * 0.25D, (w.rand.nextDouble() - 0.5D) * 0.25D, (w.rand.nextDouble() - 0.5D) * 0.25D);
+                     fx = new EntityFlameFX(w, blockX + 0.5D + (double)i, blockY + 0.5D + (double)y, blockZ + 0.5D + (double)z, (w.rand.nextFloat() - 0.5F) * 0.25D, (w.rand.nextFloat() - 0.5F) * 0.25D, (w.rand.nextFloat() - 0.5F) * 0.25D);
                      fx.noClip = true;
                      FMLClientHandler.instance().getClient().effectRenderer.addEffect(fx);
                   }
@@ -346,7 +346,7 @@ public class ClientProxy extends CommonProxy {
          }
       } else {
          for(i = 0; i < howMany; ++i) {
-            fx = new EntityFlameFX(w, blockX + 0.5D, blockY + 0.5D, blockZ + 0.5D, (w.rand.nextDouble() - 0.5D) * 0.25D, (w.rand.nextDouble() - 0.5D) * 0.25D, (w.rand.nextDouble() - 0.5D) * 0.25D);
+            fx = new EntityFlameFX(w, blockX + 0.5D, blockY + 0.5D, blockZ + 0.5D, (w.rand.nextFloat() - 0.5F) * 0.25D, (w.rand.nextFloat() - 0.5F) * 0.25D, (w.rand.nextFloat() - 0.5F) * 0.25D);
             fx.noClip = true;
             FMLClientHandler.instance().getClient().effectRenderer.addEffect(fx);
          }
@@ -356,7 +356,7 @@ public class ClientProxy extends CommonProxy {
 
    public void soulParticles(int blockX, int blockY, int blockZ, World world) {
       for(int i = 0; i < 10; ++i) {
-         EntitySpellParticleFX fx = new EntitySpellParticleFX(world, (double)blockX + 0.5D + (world.rand.nextDouble() - 0.5D) * 0.8D, (double)blockY + 0.8D, (double)blockZ + 0.5D + (world.rand.nextDouble() - 0.5D) * 0.8D, 0.0D, world.rand.nextDouble() * 0.25D, 0.0D);
+         EntitySpellParticleFX fx = new EntitySpellParticleFX(world, (double)blockX + 0.5D + (world.rand.nextFloat() - 0.5F) * 0.8D, (double)blockY + 0.8D, (double)blockZ + 0.5D + (world.rand.nextFloat() - 0.5F) * 0.8D, 0.0D, world.rand.nextFloat() * 0.25D, 0.0D);
          fx.noClip = true;
          FMLClientHandler.instance().getClient().effectRenderer.addEffect(fx);
       }
@@ -373,13 +373,13 @@ public class ClientProxy extends CommonProxy {
       double zCenter = (ent.boundingBox.maxZ + ent.boundingBox.minZ) / 2.0D;
 
       for(int i = 0; i < times; ++i) {
-         double theta = p.worldObj.rand.nextDouble() * 3.141592653589793D * 2.0D;
-         double phi = p.worldObj.rand.nextDouble() * 3.141592653589793D * 2.0D;
+         double theta = p.worldObj.rand.nextFloat() * 3.141592653589793D * 2.0D;
+         double phi = p.worldObj.rand.nextFloat() * 3.141592653589793D * 2.0D;
          double z1 = zCenter + radius * Math.cos(phi);
          double y1 = yCenter + radius * Math.sin(phi) * Math.sin(theta);
          double x1 = xCenter + radius * Math.sin(phi) * Math.cos(theta);
-         theta = p.worldObj.rand.nextDouble() * 3.141592653589793D * 2.0D;
-         phi = p.worldObj.rand.nextDouble() * 3.141592653589793D * 2.0D;
+         theta = p.worldObj.rand.nextFloat() * 3.141592653589793D * 2.0D;
+         phi = p.worldObj.rand.nextFloat() * 3.141592653589793D * 2.0D;
          double z2 = zCenter + radius * Math.cos(phi);
          double y2 = yCenter + radius * Math.sin(phi) * Math.sin(theta);
          double x2 = xCenter + radius * Math.sin(phi) * Math.cos(theta);

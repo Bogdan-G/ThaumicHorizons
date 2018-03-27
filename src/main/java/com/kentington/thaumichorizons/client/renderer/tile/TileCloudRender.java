@@ -15,7 +15,7 @@ import org.lwjgl.opengl.GL11;
 public class TileCloudRender extends TileEntitySpecialRenderer {
 
    private Minecraft mc = Minecraft.getMinecraft();
-   Random random = new Random();
+   Random random = new org.bogdang.modifications.random.XSTR();
    private int rendererUpdateCount;
    private static final ResourceLocation locationRainPng = new ResourceLocation("thaumichorizons", "textures/environment/rain.png");
    private static final ResourceLocation locationEmberPng = new ResourceLocation("thaumichorizons", "textures/environment/firerain.png");

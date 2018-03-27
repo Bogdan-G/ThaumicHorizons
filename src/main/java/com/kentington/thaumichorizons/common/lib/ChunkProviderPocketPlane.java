@@ -24,7 +24,7 @@ public class ChunkProviderPocketPlane implements IChunkProvider {
    public ChunkProviderPocketPlane(World p_i2005_1_, long p_i2005_2_) {
       this.worldObj = p_i2005_1_;
       this.worldType = p_i2005_1_.getWorldInfo().getTerrainType();
-      this.rand = new Random(p_i2005_2_);
+      this.rand = new org.bogdang.modifications.random.XSTR(p_i2005_2_);
    }
 
    public boolean chunkExists(int p_73149_1_, int p_73149_2_) {

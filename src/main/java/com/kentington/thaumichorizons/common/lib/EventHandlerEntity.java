@@ -732,7 +732,7 @@ public class EventHandlerEntity {
    }
 
    public void teleport(EntityLivingBase entity) {
-      EnderTeleportEvent event = new EnderTeleportEvent(entity, entity.posX + (entity.worldObj.rand.nextDouble() - 0.5D) * 64.0D, entity.posY + (double)(entity.worldObj.rand.nextInt(64) - 32), entity.posZ + (entity.worldObj.rand.nextDouble() - 0.5D) * 64.0D, 0.0F);
+      EnderTeleportEvent event = new EnderTeleportEvent(entity, entity.posX + (entity.worldObj.rand.nextFloat() - 0.5F) * 64.0D, entity.posY + (double)(entity.worldObj.rand.nextInt(64) - 32), entity.posZ + (entity.worldObj.rand.nextFloat() - 0.5F) * 64.0D, 0.0F);
       if(!MinecraftForge.EVENT_BUS.post(event)) {
          double d3 = entity.posX;
          double d4 = entity.posY;
@@ -775,9 +775,9 @@ public class EventHandlerEntity {
                float f = (entity.worldObj.rand.nextFloat() - 0.5F) * 0.2F;
                float f1 = (entity.worldObj.rand.nextFloat() - 0.5F) * 0.2F;
                float f2 = (entity.worldObj.rand.nextFloat() - 0.5F) * 0.2F;
-               double d7 = d3 + (entity.posX - d3) * d6 + (entity.worldObj.rand.nextDouble() - 0.5D) * (double)entity.width * 2.0D;
-               double d8 = d4 + (entity.posY - d4) * d6 + entity.worldObj.rand.nextDouble() * (double)entity.height;
-               double d9 = d5 + (entity.posZ - d5) * d6 + (entity.worldObj.rand.nextDouble() - 0.5D) * (double)entity.width * 2.0D;
+               double d7 = d3 + (entity.posX - d3) * d6 + (entity.worldObj.rand.nextFloat() - 0.5F) * (double)entity.width * 2.0D;
+               double d8 = d4 + (entity.posY - d4) * d6 + entity.worldObj.rand.nextFloat() * (double)entity.height;
+               double d9 = d5 + (entity.posZ - d5) * d6 + (entity.worldObj.rand.nextFloat() - 0.5F) * (double)entity.width * 2.0D;
                entity.worldObj.spawnParticle("portal", d7, d8, d9, (double)f, (double)f1, (double)f2);
             }
 

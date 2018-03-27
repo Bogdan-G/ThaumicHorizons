@@ -138,7 +138,7 @@ public class TileSoulExtractor extends TileVisNode implements ISidedInventory {
                this.ticksLeft -= 1 + visBoost;
                if(above instanceof TileJarBrain) {
                   for(int below = 0; below < 1 + visBoost; ++below) {
-                     if(Math.random() > 0.99D) {
+                     if((new org.bogdang.modifications.random.XSTR()).nextFloat() > 0.99D) {
                         ++((TileJarBrain)above).xp;
                         if(((TileJarBrain)above).xp >= ((TileJarBrain)above).xpMax) {
                            ((TileJarBrain)above).xp = ((TileJarBrain)above).xpMax;

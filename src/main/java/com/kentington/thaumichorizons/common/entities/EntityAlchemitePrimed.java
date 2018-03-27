@@ -23,7 +23,7 @@ public class EntityAlchemitePrimed extends Entity {
    public EntityAlchemitePrimed(World p_i1730_1_, double p_i1730_2_, double p_i1730_4_, double p_i1730_6_, EntityLivingBase p_i1730_8_) {
       this(p_i1730_1_);
       this.setPosition(p_i1730_2_, p_i1730_4_, p_i1730_6_);
-      float f = (float)(Math.random() * 3.141592653589793D * 2.0D);
+      float f = (float)((new org.bogdang.modifications.random.XSTR()).nextFloat() * 3.141592653589793D * 2.0D);
       this.setSize(0.98F, 0.98F);
       super.motionX = (double)(-((float)Math.sin((double)f)) * 0.02F);
       super.motionY = 0.20000000298023224D;

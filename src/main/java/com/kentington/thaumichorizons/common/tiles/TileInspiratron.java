@@ -79,7 +79,7 @@ public class TileInspiratron extends TileThaumcraft implements ISoulReceiver, IS
 
    public void addSoulBits(int bits) {
       for(int i = 0; i < bits; ++i) {
-         if(Math.random() >= 0.97D) {
+         if((new org.bogdang.modifications.random.XSTR()).nextFloat() >= 0.97D) {
             super.worldObj.playSoundEffect((double)super.xCoord + 0.5D, (double)super.yCoord + 0.5D, (double)super.zCoord + 0.5D, "thaumcraft:write", 0.2F, super.worldObj.rand.nextFloat());
             ++this.progress;
          }

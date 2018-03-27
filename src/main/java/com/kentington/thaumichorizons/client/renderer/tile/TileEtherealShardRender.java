@@ -55,7 +55,7 @@ public class TileEtherealShardRender extends TileEntitySpecialRenderer {
 
       Color var34 = new Color(red, green, blue);
       UtilsFX.bindTexture("textures/models/crystal.png");
-      Random var35 = new Random((long)(tco.getBlockMetadata() + tco.xCoord + tco.yCoord * tco.zCoord));
+      Random var35 = new org.bogdang.modifications.random.XSTR((long)(tco.getBlockMetadata() + tco.xCoord + tco.yCoord * tco.zCoord));
       this.drawCrystal(0, (float)x, (float)y, (float)z, tco.rotation, 0.0F, var35, var34.getRGB(), 1.1F);
       long var36 = System.nanoTime();
       UtilsFX.bindTexture(tx2);

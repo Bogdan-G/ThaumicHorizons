@@ -38,7 +38,7 @@ public class TileVatMatrixRender extends TileEntitySpecialRenderer {
       float f1 = (float)count / 500.0F;
       float f3 = 0.9F;
       float f2 = 0.0F;
-      Random random = new Random(245L);
+      Random random = new org.bogdang.modifications.random.XSTR(245L);
       GL11.glDisable(3553);
       GL11.glShadeModel(7425);
       GL11.glEnable(3042);

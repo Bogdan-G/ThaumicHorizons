@@ -99,9 +99,9 @@ public class EntityEndersteed extends EntityHorse {
                float f = (super.rand.nextFloat() - 0.5F) * 0.2F;
                float f1 = (super.rand.nextFloat() - 0.5F) * 0.2F;
                float f2 = (super.rand.nextFloat() - 0.5F) * 0.2F;
-               double d7 = d3 + (super.posX - d3) * d6 + (super.rand.nextDouble() - 0.5D) * (double)super.width * 2.0D;
-               double d8 = d4 + (super.posY - d4) * d6 + super.rand.nextDouble() * (double)super.height;
-               double d9 = d5 + (super.posZ - d5) * d6 + (super.rand.nextDouble() - 0.5D) * (double)super.width * 2.0D;
+               double d7 = d3 + (super.posX - d3) * d6 + (super.rand.nextFloat() - 0.5F) * (double)super.width * 2.0D;
+               double d8 = d4 + (super.posY - d4) * d6 + super.rand.nextFloat() * (double)super.height;
+               double d9 = d5 + (super.posZ - d5) * d6 + (super.rand.nextFloat() - 0.5F) * (double)super.width * 2.0D;
                super.worldObj.spawnParticle("portal", d7, d8, d9, (double)f, (double)f1, (double)f2);
             }
 

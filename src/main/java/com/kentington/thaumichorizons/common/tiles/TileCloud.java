@@ -301,11 +301,11 @@ public class TileCloud extends TileThaumcraft {
                      var11 = Aspect.WATER;
                   }
 
-                  EntityAspectOrb orb = new EntityAspectOrb(super.worldObj, (double)super.xCoord + super.worldObj.rand.nextDouble(), (double)super.yCoord + 0.5D, (double)super.zCoord + super.worldObj.rand.nextDouble(), var11, 1);
+                  EntityAspectOrb orb = new EntityAspectOrb(super.worldObj, (double)super.xCoord + super.worldObj.rand.nextFloat(), (double)super.yCoord + 0.5D, (double)super.zCoord + super.worldObj.rand.nextFloat(), var11, 1);
                   super.worldObj.spawnEntityInWorld(orb);
                   break;
                case 7:
-                  EntityXPOrb xporb = new EntityXPOrb(super.worldObj, (double)super.xCoord + super.worldObj.rand.nextDouble(), (double)super.yCoord + 0.5D, (double)super.zCoord + super.worldObj.rand.nextDouble(), super.worldObj.rand.nextInt(4));
+                  EntityXPOrb xporb = new EntityXPOrb(super.worldObj, (double)super.xCoord + super.worldObj.rand.nextFloat(), (double)super.yCoord + 0.5D, (double)super.zCoord + super.worldObj.rand.nextFloat(), super.worldObj.rand.nextInt(4));
                   super.worldObj.spawnEntityInWorld(xporb);
                   break;
                case 8:
@@ -457,7 +457,7 @@ public class TileCloud extends TileThaumcraft {
    }
 
    private void entityDropItem(ItemStack itemStack, float f) {
-      EntityItemInvulnerable theItem = new EntityItemInvulnerable(super.worldObj, (double)super.xCoord + super.worldObj.rand.nextDouble(), (double)super.yCoord + 0.5D, (double)super.zCoord + super.worldObj.rand.nextDouble(), itemStack);
+      EntityItemInvulnerable theItem = new EntityItemInvulnerable(super.worldObj, (double)super.xCoord + super.worldObj.rand.nextFloat(), (double)super.yCoord + 0.5D, (double)super.zCoord + super.worldObj.rand.nextFloat(), itemStack);
       super.worldObj.spawnEntityInWorld(theItem);
    }
 

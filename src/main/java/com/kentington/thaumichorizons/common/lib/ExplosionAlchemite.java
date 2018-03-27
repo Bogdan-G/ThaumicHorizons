@@ -43,7 +43,7 @@ public class ExplosionAlchemite extends Explosion {
    public boolean field_77286_a;
    public boolean field_82755_b = true;
    private int field_77289_h = 16;
-   private Random explosionRNG = new Random();
+   private Random explosionRNG = new org.bogdang.modifications.random.XSTR();
    private World worldObj;
    public double field_77284_b;
    public double field_77285_c;
@@ -184,7 +184,7 @@ public class ExplosionAlchemite extends Explosion {
             ItemStack stack;
             if(this.worldObj.getTileEntity(i, j, k) != null && this.worldObj.getTileEntity(i, j, k) instanceof TileNode) {
                TileNode var19 = (TileNode)this.worldObj.getTileEntity(i, j, k);
-               double var18 = Math.random();
+               double var18 = (new org.bogdang.modifications.random.XSTR()).nextFloat();
                if(var18 >= 0.25D) {
                   if(var18 < 0.5D) {
                      var19.setNodeModifier(NodeModifier.FADING);
